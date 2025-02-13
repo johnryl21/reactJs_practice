@@ -49,10 +49,18 @@ const App = () => {
     setTodos(updatedTodos);
   };
 
-  // Delete All - Clears all tasks
-  const deleteAllTodos = () => {
+  // Delete All - Clears all tasks with confirmation
+const deleteAllTodos = () => {
+  if (todos.length === 0) {
+    alert("No tasks to delete!");
+    return;
+  }
+
+  const isConfirmed = window.confirm("Are you sure you want to delete all tasks?");
+  if (isConfirmed) {
     setTodos([]);
-  };
+  }
+};
 
   return (
     <div className="app-container">
