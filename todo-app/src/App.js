@@ -64,7 +64,7 @@ const deleteAllTodos = () => {
 
   return (
     <div className="app-container">
-      <h1>To-Do List</h1>
+      <h1>Candelon To-Do List</h1>
       <TodoForm addTodo={addTodo} />
 
       {/* Check All and Delete All Buttons */}
